@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kichidi-alerts",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-13",
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "KICHIDI_ENGINE",
+        "class_name": "KichidiEngine"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["KichidiEngine"]
+    }
+  ]
+}
